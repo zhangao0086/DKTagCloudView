@@ -2,7 +2,7 @@
 ![GIF](https://raw.githubusercontent.com/zhangao0086/DKTagCloudView/master/preview1.gif)
 ![GIF](https://raw.githubusercontent.com/zhangao0086/DKTagCloudView/master/preview2.gif)
 ## Overview
-DKTagCloudView is a tag clouds view on iOS.
+DKTagCloudView is a tag clouds view on iOS. It can generate a random and not intersects coordinates.
 
 ## How To Get Started
 
@@ -68,3 +68,6 @@ Customized:
  */
 @property (nonatomic, copy) NSArray *randomColors;
 ```
+
+## License
+This code is distributed under the terms and conditions of the <a href="https://github.com/zhangao0086/DKTagCloudView/master/LICENSE">MIT license</a>.
