@@ -39,3 +39,32 @@ Generates:
 ``` objective-c
 [self.tagCloudView generate];
 ```
+
+Customized:
+``` objetive-c
+/**
+ *  Min font size. Defautls to 14.
+ */
+@property (nonatomic, assign) NSInteger minFontSize;
+
+/**
+ *  Max font size. Defaults to 60.
+ */
+@property (nonatomic, assign) NSInteger maxFontSize;
+
+/**
+ *  Random text colors. Defaults to: 
+ [
+         [UIColor blackColor],
+         [UIColor cyanColor],
+         [UIColor purpleColor],
+         [UIColor orangeColor],
+         [UIColor redColor],
+         [UIColor yellowColor],
+         [UIColor lightGrayColor],
+         [UIColor grayColor],
+         [UIColor greenColor],
+ ]
+ */
+@property (nonatomic, copy) NSArray *randomColors;
+```
