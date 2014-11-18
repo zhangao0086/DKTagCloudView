@@ -38,6 +38,11 @@
 
 @property (nonatomic, copy) NSArray *titls; // @[ NSString... ]
 
+/**
+ *  Callback. Index start at 0.
+ */
+@property (nonatomic, copy) void (^tagClickBlock)(NSString *title, NSInteger index);
+
 - (void)generate;
 
 @end

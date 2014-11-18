@@ -27,6 +27,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    self.userInteractionEnabled = YES;
     self.minFontSize = 14;
     self.maxFontSize = 60;
     self.randomColors = @[
@@ -79,10 +80,12 @@
     [self.labels makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.labels removeAllObjects];
     
+    int i = 0;
     for (NSString *title in self.titls) {
         assert([title isKindOfClass:[NSString class]]);
         
         UILabel *label = [[UILabel alloc] init];
+        label.tag = i++;
         label.text = title;
         label.textColor = [self randomColor];
         label.font = [self randomFont];
@@ -93,6 +96,17 @@
         
         [self.labels addObject:label];
         [self addSubview:label];
+        
+        UITapGestureRecognizer *tagGestue = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+        [label addGestureRecognizer:tagGestue];
+        label.userInteractionEnabled = YES;
+    }
+}
+
+- (void)handleGesture:(UIGestureRecognizer*)gestureRecognizer {
+    UILabel *label = (UILabel *)gestureRecognizer.view;
+    if (self.tagClickBlock) {
+        self.tagClickBlock(label.text,label.tag);
     }
 }
 
