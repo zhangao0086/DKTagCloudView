@@ -41,7 +41,7 @@ Generates:
 ```
 
 Customized:
-``` objetive-c
+``` objective-c
 /**
  *  Min font size. Defautls to 14.
  */
