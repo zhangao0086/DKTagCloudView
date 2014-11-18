@@ -22,7 +22,8 @@
     self.navigationController.view.backgroundColor = [UIColor whiteColor];
     
     DKTagCloudView *tagCloudView = [[DKTagCloudView alloc] initWithFrame:CGRectMake(0, 64,
-                                                                                    self.view.bounds.size.width, self.view.bounds.size.height - 64)];
+                                                                                    self.view.bounds.size.width,
+                                                                                    self.view.bounds.size.height - 64)];
     [self.view addSubview:tagCloudView];
     self.tagCloudView = tagCloudView;
     
