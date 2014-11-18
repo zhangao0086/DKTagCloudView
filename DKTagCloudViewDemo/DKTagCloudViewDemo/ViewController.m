@@ -45,6 +45,9 @@
                                 @"DKTagCloudViewDemo",
                                 @"This is a test"
                                 ];
+    [self.tagCloudView setTagClickBlock:^(NSString *title, NSInteger index) {
+        NSLog(@"title:%@,index:%zd",title,index);
+    }];
 }
 
 - (IBAction)regenerate:(id)sender {

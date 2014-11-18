@@ -7,7 +7,7 @@ DKTagCloudView is a tag clouds view on iOS. It can generate a random and not int
 ## How To Get Started
 
 Add `#import "DKTagCloudView.h"` to the top of classes that will use it.  
-Create instances (Also supports xib/storyboard) :
+#### Create instances (Also supports xib/storyboard) :
 
 ``` objective-c
 DKTagCloudView *tagCloudView = [[DKTagCloudView alloc] initWithFrame:CGRectMake(0, 64,
@@ -17,7 +17,7 @@ DKTagCloudView *tagCloudView = [[DKTagCloudView alloc] initWithFrame:CGRectMake(
 self.tagCloudView = tagCloudView;
 ```
 
-Setup items:
+#### Setup items:
 
 ``` objective-c
 self.tagCloudView.titls = @[
@@ -35,12 +35,21 @@ self.tagCloudView.titls = @[
                             ];
 ```
 
-Generates:
+#### Generates:
+
 ``` objective-c
 [self.tagCloudView generate];
 ```
 
-Customized:
+#### Callback
+
+```
+[self.tagCloudView setTagClickBlock:^(NSString *title, NSInteger index) {
+    NSLog(@"title:%@,index:%zd",title,index);
+}];
+```
+
+#### Customized:
 ``` objective-c
 /**
  *  Min font size. Defautls to 14.
