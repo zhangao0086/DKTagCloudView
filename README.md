@@ -6,6 +6,26 @@ DKTagCloudView is a tag clouds view on iOS. It can generate a random and not int
 
 ## How To Get Started
 
+### Installation with CocoaPods
+
+``` bash
+$ pod search DKTagCloudView
+
+-> DKTagCloudView (1.0.0)
+   A tag clouds view on iOS.t can generate a random and not intersects
+   coordinates.
+   pod 'DKTagCloudView', '~> 1.0.0'
+   - Homepage: https://github.com/zhangao0086/DKTagCloudView
+   - Source:   https://github.com/zhangao0086/DKTagCloudView.git
+   - Versions: 1.0.0 [master repo]
+```
+
+Edit your Podfile and add DKTagCloudView:
+
+``` bash
+pod 'DKCarouselView', '~> x.x.x'
+```
+
 Add `#import "DKTagCloudView.h"` to the top of classes that will use it.  
 #### Create instances (Also supports xib/storyboard) :
 
