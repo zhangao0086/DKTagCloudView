@@ -63,13 +63,14 @@ self.tagCloudView.titls = @[
 
 #### Callback
 
-```
+``` objective-c
 [self.tagCloudView setTagClickBlock:^(NSString *title, NSInteger index) {
     NSLog(@"title:%@,index:%zd",title,index);
 }];
 ```
 
 #### Customized:
+
 ``` objective-c
 /**
  *  Min font size. Defautls to 14.
